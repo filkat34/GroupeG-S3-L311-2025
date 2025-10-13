@@ -1,33 +1,20 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-  let is_run = "true";
+window.addEventListener("DOMContentLoaded", () => {
+  let is_run = true;
 
   init();
 
   function init() {
-    document.querySelector(".button").addEventListener("click", (event) => {
-      is_run = !is_run(
-        (" " + document.querySelector(".button").className + " ").indexOf(
-          "pause"
-        ) > -1
-      )
-        ? document
-            .querySelector(".button")
-            .setAttribute(
-              "class",
-              document
-                .querySelector(".button")
-                .getAttribute("class")
-                .replace(" pause", "")
-            )
-        : document
-            .querySelector(".button")
-            .setAttribute(
-              "class",
-              document.querySelector(".button").getAttribute("class") + " pause"
-            );
+    document.querySelector(".button").addEventListener("click", () => {
+      is_run = !is_run;
+      const btn = document.querySelector(".button");
+      if (is_run) {
+        btn.classList.add("pause");
+      } else {
+        btn.classList.remove("pause");
+      }
     });
 
-    setTimeInterval(function () {
+    setInterval(function () {
       if (is_run) {
         let oDate = new Date();
         document.querySelector("#hours").innerHTML = adjustTimer(
@@ -50,10 +37,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 
   function adjustTimer(timer) {
-    timer < 10 ? "0" + timer : timer;
+    return timer < 10 ? "0" + timer : timer;
   }
 
-  function randomHexColor(x, y) {
+  function randomHexColor(x, y, z) {
     return (
       "rgb(" +
       Math.floor((x / 100) * 256) +

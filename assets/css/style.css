@@ -5,10 +5,11 @@ font-family: "Aldrich";
 font-size: 12px;
 height:100%;
 color: #F0F1D5;
-background-color: transpent;
+background-color: transparent;
 }
-#wrappr{
+#wrapper{
 display:flex;
+flex-direction: column;
 justify-content:center;
 align-items:center;
 height: 100%;
@@ -23,9 +24,6 @@ content: " : ";
 .timer span:last-child::after{
 content: "";
 }
-.controls{
-text-align: center;
-}
 .controls button {
 box-sizing: border-box;
 height: 74px;
@@ -39,5 +37,5 @@ border-width: 37px 0 37px 60px;
 }
 .controls button.pause{
 border-style: double;
-border-width: 0px 0 0px 60px;
+border-width: 1px 0 1px 60px;
 }
