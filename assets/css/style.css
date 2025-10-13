@@ -13,9 +13,9 @@ justify-content:center;
 align-items:center;
 height: 100%;
 }
-.inside
+.inside {
 font-weight: bold;
-font-size: 75px;;
+font-size: 75px;
 }
 .timer span::after{
 content: " : ";
