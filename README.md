@@ -6,7 +6,7 @@
 
 ## Groupe G
 
-| Etudiant.e  | Compte Github          
+| Etudiant.e  |  Github     |    
 | :----------:|:-----------:| 
 | Mathilde C. | Clouddy23   | 
 | Kamo G.     | Spaghette5  |   
