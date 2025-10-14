@@ -1,6 +1,6 @@
 # Simple Time - UE L311 - Semaine 3 
 
-## Groupe G
+## Membres du groupe G
 
 | Etudiant.e  |  Github     |    
 | :----------:|:-----------:| 
@@ -9,8 +9,8 @@
 | Mathieu L.  | mathleys    |   
 | Filippos K. | filkat34    | 
 
-## Travail collaboratif
-## Planning
+## Organisation du travail collaboratif
+## Planning de la semaine
 | Dates		    |  Objectif   								 																			                                                            |    
 | :-----------|:------------------------------------------------------------------------------------------------------------------------------| 
 | 12/10		    | **Code review n. 1** en visio : lecture collective du code et ouverture d'issues pour mémoire sur Github    				          |
