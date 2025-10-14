@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class') + ' pause');
     })
 
-setTimeInterval(function () {
+setInterval(function () {
     if (is_run) {
         let oDate = new Date();
         document.querySelector('#hours').innerHTML = adjustTimer(oDate.getHours());
