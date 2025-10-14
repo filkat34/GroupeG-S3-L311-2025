@@ -19,7 +19,7 @@ setInterval(function () {
         document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
 
     }
-}, 1000;
+}, 1000);
     }
 
 function adjustTimer(timer) {
