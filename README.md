@@ -16,7 +16,7 @@
 ## Travail collaboratif
 ## Planning
 | Dates		    |  Objectif   								 																			                                                            |    
-| :----------:|:------------------------------------------------------------------------------------------------------------------------------| 
+| :-----------|:------------------------------------------------------------------------------------------------------------------------------| 
 | 12/10		    | **Code review n. 1** en visio : lecture collective du code et ouverture d'issues pour mémoire sur Github    				          |
 | 13/10-16/10 | **Période de débogage** en priorité des erreurs assignées au développeur dans sa branche _bugfix/nomsdudev_					        |   
 | 17/10		    | **Code review n. 2** pour discussion autour des pull requests et merge dans main						                                  |   
