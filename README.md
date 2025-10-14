@@ -19,4 +19,10 @@
 | 18/10-19/10 | **Rédaction du CR** dans le README.md de la branche main afin que tout le monde puisse y accéder et l'amender    			      | 
 
 ## Méthodes de débogage employées
-## Typologie des erreurs trouvées
+## Typologie des bogues corrigés
+### Syntaxe
+### Structure
+### Logique
+### Interaction
+### Affichage
+### Optimisation et qualité du code
