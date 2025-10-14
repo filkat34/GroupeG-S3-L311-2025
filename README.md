@@ -24,7 +24,7 @@ Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques 
 ### Gestion des fichiers
 | Fichier |  Exemple	| Solution |
 | :----- | :------	| :------ |
-| index  | _index.php_	| Renommer l'extension du fichier en _index.html_	|
+| index  | _index.php_	| Renommer l'extension incorrecte du fichier en _index.html_	|
 | index	 | _asset/css/style.css_| Correction de la coquille dans le nom du dossier _assets/css/style.css_ |
 ### Syntaxe
 ### Structure
