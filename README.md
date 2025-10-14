@@ -25,4 +25,4 @@
 ### Logique
 ### Interaction
 ### Affichage
-### Optimisation et qualité du code
+### Qualité du code
