@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         return (timer < 10 ? '0' + timer : timer);
     }
 
-    function randomHexColor(x, y) {
+    function randomHexColor(x, y, z) {
         return "rgb(" + Math.floor(x / 100 * 256) + "," + Math.floor(y / 100 * 256) + "," + Math.floor(z / 100 * 256) + ")";
     }
 });
