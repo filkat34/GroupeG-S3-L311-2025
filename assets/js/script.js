@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
                 document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
 
-            }
+            } // pourquoi ne pas arrêter la fonction setInterval quand sur pause ?
         }, 1000);
     }
 
