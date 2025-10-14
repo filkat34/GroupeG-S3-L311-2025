@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 document.querySelector('#minutes').innerHTML = adjustTimer(oDate.getMinutes());
                 document.querySelector('#seconds').innerHTML = adjustTimer(oDate.getSeconds());
 
-                document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
+                document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML); // innerHTML ne devrait pas être remplacé par textContent vu que ce n'est pas du HTML ?
 
             } // pourquoi ne pas arrêter la fonction setInterval quand sur pause ?
         }, 1000);
