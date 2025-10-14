@@ -9,7 +9,7 @@ body {
     background-color: transparent;
 }
 
-#wrappr {
+#wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
