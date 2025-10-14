@@ -5,8 +5,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     function init() {
         document.querySelector('.button').addEventListener('click', (event) =>
-            is_run = !is_run
-                ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class') + ' pause');
+            is_run = !is_run;
+        ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class') + ' pause');
     })
 
 setInterval(function () {
