@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function adjustTimer(timer) {
-        (timer < 10 ? '0' + timer : timer);
+        return (timer < 10 ? '0' + timer : timer);
     }
 
     function randomHexColor(x, y) {
