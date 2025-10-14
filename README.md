@@ -5,6 +5,14 @@
 > A simple and stupid clock
 
 ## Groupe G
+
+| Etudiant.e  | Compte Github          
+| :----------:|:-----------:| 
+| Mathilde C. | Clouddy23   | 
+| Kamo G.     | Spaghette5  |   
+| Mathieu L.  | mathleys    |   
+| Filippos K. | filkat34    | 
+
 ## Travail collaboratif
 ## Planning
 ## Méthodes de débogage employées
