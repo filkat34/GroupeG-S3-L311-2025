@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>Timetitle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Horloge numérique avec fonctionnalités de pause et de reprise.">
+    <meta name="keywords" content="horloge, numérique, minuterie, pause, reprise">
+    <meta name="author" content="GroupeG-S3-L311-2025">
+    <title>Horloge</title>
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="inside" id="wrapper">
-            <div class="timer">
-                <span id="hours">00</span>
-                <span id="minutes">00</span>
-                <span id="seconds">00</span>
-            </div>
-            <div class="controls">
-                <button class="button pause"></button>
-            </div>
+    <div class="container">
+        <div class="timer">
+            <span id="hours" aria-live="polite">00</span>
+            <span class="separator">:</span>
+            <span id="minutes" aria-live="polite">00</span>
+            <span class="separator">:</span>
+            <span id="seconds" aria-live="polite">00</span>
+        </div>
+        <div class="controls">
+            <button class="button pause" aria-label="Pause/Resume timer"></button>
         </div>
     </div>
 </body>

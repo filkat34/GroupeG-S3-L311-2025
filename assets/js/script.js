@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const seconds = document.querySelector("#seconds");
 
   // Variables
-  let is_run = true;
+  let isRunning = true;
 
   /**
    * Fonction d'initialisation
@@ -16,8 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
   function init() {
     // Gestion du clic sur le bouton (pause/reprise)
     btn.addEventListener("click", () => {
-      is_run = !is_run;
-      if (is_run) {
+      isRunning = !isRunning;
+      if (isRunning) {
         btn.classList.add("pause");
       } else {
         btn.classList.remove("pause");
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Mise à jour de l'heure et du fond toutes les secondes
     setInterval(function () {
-      if (is_run) {
+      if (isRunning) {
         let oDate = new Date();
         hours.innerHTML = adjustTimer(oDate.getHours());
         minutes.innerHTML = adjustTimer(oDate.getMinutes());
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return timer < 10 ? "0" + timer : timer;
   }
 
-  // Génère une couleur RGB basée à partir des valeurs passées en paramètre
+  // Génère une couleur RGB basée à partir des valeurs passées en paramètres
   function randomHexColor(x, y, z) {
     return (
       "rgb(" +
@@ -59,6 +59,6 @@ window.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  //Appel de la fonction d'initialisation
+  // Appel de la fonction d'initialisation
   init();
 });
