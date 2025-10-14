@@ -27,6 +27,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function randomHexColor(x, y, z) {
-        return "rgb(" + Math.floor(x / 100 * 256) + "," + Math.floor(y / 100 * 256) + "," + Math.floor(z / 100 * 256) + ")";
+        return "rgb(" + Math.floor(x / 100 * 256) + "," + Math.floor(y / 100 * 256) + "," + Math.floor(z / 100 * 256) + ")"; // pourquoi ne pas convertir en nombre les chaines de caractères x, y et z ?
     }
 });
