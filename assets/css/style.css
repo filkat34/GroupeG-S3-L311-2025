@@ -16,9 +16,9 @@ body {
     height: 100%;
 }
 
-.inside font-weight: bold;
-font-size: 75px;
-;
+.inside {
+    font-weight: bold;
+    font-size: 75px;
 }
 
 .timer span::after {
