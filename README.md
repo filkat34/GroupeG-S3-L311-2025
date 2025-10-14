@@ -20,6 +20,7 @@
 
 ## Méthodes de débogage employées
 ## Typologie des erreurs
+### Fichiers
 ### Syntaxe
 ### Structure
 ### Logique
