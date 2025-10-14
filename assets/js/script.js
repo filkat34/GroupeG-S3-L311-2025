@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let is_run = "true";
 
     init();
+    setTimeInterval();
 
     function init() {
         document.querySelector('.button').addEventListener('click', (event) => {
