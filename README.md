@@ -57,9 +57,9 @@ Quelques erreurs ont été trouvées concernant l'extension du fichier index qui
 De nombreuses erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles typographiques, d'oublis de fermeture de balises et d'accolades ou des noms de fonctions javascript erronés.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
-| index  |_```<title>Timetitle>```_| Rétablissment de la balise fermante _```<title>Timetitle</title>```_ |
+| index  |_```<title>Timetitle>```_| Ajout de la balise fermante _```<title>Timetitle</title>```_ |
 | styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
-| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Rétablissement de la parenthèse fermante ainsi que du nom correct de la fonction Javascript _```setInterval(function(){ ... }, 1000);```_ |
+| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Ajout de la parenthèse fermante et correction du nom de la fonction Javascript _```setInterval(function(){ ... }, 1000);```_ |
 ### Structure
 ### Logique
 ### Interaction
