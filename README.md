@@ -42,7 +42,7 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 |Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|✅| |✅|✅|
 |L'horloge reste lisible et centrée, sans débordement.|✅| |✅|✅|
 |L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
-|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. |✅| | |✅|
+|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
 
 ## Méthodes de débogage employées
 ## Typologie des erreurs
