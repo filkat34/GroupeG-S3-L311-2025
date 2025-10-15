@@ -19,7 +19,7 @@ La première code review nous a permis de repartir grossièrement le travail ent
 
 Tout en se partageant la résolution des bogues listés et vu l'ampleur restreinte du projet et l'envie de certains de se préoccuper également d'accéssibilité et de qualité de code, nous avons décidé de laisser libre cours à chacun de travailler sur sa branche et d'apporter les modifications qu'il juge nécessaires. Une fois son travail fini, chacun fait une demande de tirage pour que les autres puissent en prendre connaissance. 
 
-Un travail d'harmonisation est prévu dans le cadre de la deuxième code review en visio où l'on discute des propositions de chacun, faisons des tests fonctionnels manuels dans chaque branche pour choisir et amender celle qui devra être fusionnée avec la branche principale.
+Un travail d'harmonisation est prévu dans le cadre de la deuxième code review en visio où l'on discute des propositions de chacun, faisons des tests fonctionnels manuels dans chaque branche pour choisir et amender celle qui devra être fuisionnée avec la branche principale.
 
 ## Planning de la semaine
 | Dates |  Objectif  |    
@@ -29,20 +29,21 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 | 17/10		  | **Code review n. 2** pour discussion autour des pull requests et merge dans main |   
 | 18/10-19/10 | **Finalisation de la rédaction du CR** dans le README.md de la branche main | 
 
-## Tests fonctionnels manuels
+## Test fonctionnels manuels (checklist)
 | Fonctionnalité/Branche | Mathilde | Kamo | Matthieu | Filippos |   
 | :---|:---:|:---:| :---:| :---:|
-|Pas d’erreur JavaScript dans la console.|[]|[]|[]|[x]|
+|Pas d’erreur JavaScript dans la console.|[]|[]|[]|- [x]|
 |La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.|[]|[]|[]|- [x]|
-|Les séparateurs (:) sont visibles.|[]|[]|[]|[x]|
+|Les séparateurs (:) sont visibles.|[]|[]|[]|- [x]|
 |L’heure, les minutes et les secondes se mettent à jour chaque seconde.|[]|[]|[]|- [x]|
-|Le fond change progressivement en fonction de l’heure.|[]|[]|[]|[x]|
+|Le fond change progressivement en fonction de l’heure.|[]|[]|[]|- [x]|
 |Cliquer sur le bouton met le timer en pause (l’heure n’avance plus).|[]|[]|[]|- [x]|
-|Cliquer à nouveau sur le bouton relance le timer.|[]|[]|[]|[x]|
+|Cliquer à nouveau sur le bouton relance le timer.|[]|[]|[]|- [x]|
 |Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|[]|[]|[]|- [x]|
-|L'horloge reste lisible et centré, sans débordement.|[]|[]|[]|[x]|
+|L'horloge reste lisible et centré, sans débordement.|[]|[]|[]|- [x]|
 |L'affichage de l'horloge s'adapte correctemnt sur de plus petits écrans (mobile, tablette).|[]|[]|[]|- [x]|
-|Lorsque le bouton bascule entre play/pause, il ne déplace pas les autres éléments du DOM. |[]|[]|[]|- [x]|
+|Lorsque le bouton bascule entre play/pause il ne pousse pas les autres éléments du DOM |[]|[]|[]|- [x]|
+
 
 ## Méthodes de débogage employées
 ## Typologie des erreurs
