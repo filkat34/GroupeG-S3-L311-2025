@@ -1,5 +1,29 @@
 # Simple Time - UE L311 - Semaine 3 - Groupe G
 
+## Sommaire
+
+- [Membres du groupe](#membres-du-groupe)
+- [Travail collaboratif](#travail-collaboratif)
+  - [Outils](#outils)
+  - [Principe général](#principe-général)
+- [Planning de la semaine](#planning-de-la-semaine)
+- [Méthodes de débogage employées](#méthodes-de-débogage-employées)
+  - [Analyse du fichier HTML](#analyse-du-fichier-html)
+  - [Analyse du code source dans le navigateur](#analyse-du-code-source-dans-le-navigateur)
+  - [Vérification des fichiers chargés](#vérification-des-fichiers-chargés)
+  - [Analyse et validation du HTML et du CSS](#analyse-et-validation-du-html-et-du-css)
+  - [Debug du JavaScript via la console du navigateur](#debug-du-javascript-via-la-console-du-navigateur)
+  - [Phase de test fonctionnel](#phase-de-test-fonctionnel)
+- [Typologie des erreurs](#typologie-des-erreurs)
+  - [Fichiers](#fichiers)
+  - [Syntaxe](#syntaxe)
+  - [Structure](#structure)
+  - [Logique](#logique)
+  - [Interaction](#interaction)
+  - [Affichage](#affichage)
+  - [Qualité du code](#qualité-du-code)
+- [Tests fonctionnels manuels](#tests-fonctionnels-manuels)
+
 ## Membres du groupe
 
 | Etudiant.e  |  Alias      |    
