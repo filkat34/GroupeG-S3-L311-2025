@@ -50,28 +50,28 @@ Pour identifier et corriger les problèmes, plusieurs méthodes de debug ont ét
 #### Analyse du fichier HTML :
 À l’ouverture de l’application, le navigateur affichait uniquement l’arborescence des fichiers, au lieu de charger automatiquement le fichier index.html. Cette anomalie a été attribuée à une erreur dans l’extension du fichier.
 
-![Texte alternatif](screenshots/arborescence.png)
+![<arborescencde de fichiers](screenshots/arborescence.png)
 
 #### Analyse du code source dans le navigateur :
 L’inspection du HTML a permis de détecter que le contenu attendu entre les balises <body> n’était pas présent. Cette étape a mis en évidence des erreurs structurelles qui pouvaient perturber le rendu de la page.
 
-![Texte alternatif](screenshots/erreur-balise-body.png)
+![balise body vide](screenshots/erreur-balise-body.png)
 
 #### Vérification des fichiers chargés :
 L’inspection du réseau a montré que seul index.html était chargé.Les appels au fichier CSS et à Google Fonts ont été contrôlés, révélant des fautes de frappe empêchant le chargement correct du design.
 
-![Texte alternatif](screenshots/erreur-chargement-fichiers.png)
-![Texte alternatif](screenshots/erreur-reseau-CSS.png)
+![erreur de chargement des fichiers](screenshots/erreur-chargement-fichiers.png)
+![erreur CSS détectée sur le réseau](screenshots/erreur-reseau-CSS.png)
 
 #### Analyse et validation du HTML et du CSS :
 Les fichiers ont été examinés pour vérifier le nesting des éléments, la fermeture correcte des balises et la cohérence de la syntaxe. L’éditeur VS Code a été utilisé pour détecter automatiquement les erreurs de syntaxe, les fautes de frappe et les incohérences dans les fichiers.
 
-![Texte alternatif](screenshots/erreurs-CSS.png)
+![erreurs CSS détectées sur VS Code](screenshots/erreurs-CSS.png)
 
 #### Debug du JavaScript via la console du navigateur :
 La console a signalé des erreurs : fonctions invalides, fautes de frappe, absence de fermetures et erreurs de type. Chaque erreur a été corrigée de manière ciblée, en suivant les messages de la console.
 
-![Texte alternatif](screenshots/erreur-console.png)
+![exemple d'erreur JS de la console](screenshots/erreur-console.png)
 
 #### Phase de test fonctionnel :
 Après correction, le rendu de la page et du design a été validé visuellement.Le Timer a été testé pour vérifier l’ensemble de ses fonctionnalités (affichage des heures, minutes et secondes, contrôle Play/Pause et mise à jour dynamique du fond).
