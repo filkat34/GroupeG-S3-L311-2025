@@ -29,6 +29,21 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 | 17/10		  | **Code review n. 2** pour discussion autour des pull requests et merge dans main |   
 | 18/10-19/10 | **Finalisation de la rédaction du CR** dans le README.md de la branche main | 
 
+## Tests fonctionnels manuels
+| Fonctionnalité/Branche | Mathilde | Kamo | Matthieu | Filippos |   
+| :---|:---:|:---:| :---:| :---:|
+|Pas d’erreur JavaScript dans la console.|[]|[]|[]|[x]|
+|La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.|[]|[]|[]|[x]|
+|Les séparateurs (:) sont visibles.|[]|[]|[]|[x]|
+|L’heure, les minutes et les secondes se mettent à jour chaque seconde.|[]|[]|[]|[x]|
+|Le fond change progressivement en fonction de l’heure.|[]|[]|[]|[x]|
+|Cliquer sur le bouton met le timer en pause (l’heure n’avance plus).|[]|[]|[]|[x]|
+|Cliquer à nouveau sur le bouton relance le timer.|[]|[]|[]|[x]|
+|Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|[]|[]|[]|[x]|
+|L'horloge reste lisible et centré, sans débordement.|[]|[]|[]|[x]|
+|L'affichage de l'horloge s'adapte correctemnt sur de plus petits écrans (mobile, tablette).|[]|[]|[]|[x]|
+|Lorsque le bouton bascule entre play/pause, il ne déplace pas les autres éléments du DOM. |[]|[]|[]|[x]|
+
 ## Méthodes de débogage employées
 ## Typologie des erreurs
 Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
