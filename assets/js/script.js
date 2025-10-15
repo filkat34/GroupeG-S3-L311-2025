@@ -1,32 +1,49 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    let is_run    = "true";
+window.addEventListener("DOMContentLoaded", () => {
+    let isRunning = true;
+    const button = document.querySelector('.controls .button');
+    const hoursElement = document.querySelector('#hours');
+    const minutesElement = document.querySelector('#minutes');
+    const secondsElement = document.querySelector('#seconds');
 
     init();
 
-    function init(){
-       document.querySelector('.button').addEventListener('clic', (event) => 
-            is_run = !is_run
-            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? dcument.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause');
-        })
-
-        setTimeInterval(function(){
-            if(is_run){
-                let oDate = new Date();
-                document.querySelector('#hours').innerHTML   =  adjustTimer(oDate.getHours());
-                document.querySelector('#minutes').innerHTML =  adjustTimer(oDate.getMinutes());
-                document.querySelector('#seconds').innerHTML =  adjustTimer( oDate.getSeconds());
-
-                document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
-                
+    function init() {
+        button?.addEventListener('click', toggleRunState);
+        button?.classList.toggle('pause', isRunning);
+        updateClock();
+        setInterval(() => {
+            if (isRunning) {
+                updateClock();
             }
-        }, 1000;
+        }, 1000);
     }
 
-    function adjustTimer(timer){
-        (timer < 10 ? '0'+timer : timer);
+    function toggleRunState() {
+        isRunning = !isRunning;
+        button?.classList.toggle('pause', isRunning);
     }
 
-    function randomHexColor(x, y){
-        return "rgb(" + Math.floor(x/100 * 256) + "," + Math.floor(y/100 * 256) + "," + Math.floor(z/100 * 256) + ")";
+    function updateClock() {
+        const now = new Date();
+        hoursElement.textContent = adjustTimer(now.getHours());
+        minutesElement.textContent = adjustTimer(now.getMinutes());
+        secondsElement.textContent = adjustTimer(now.getSeconds());
+        document.body.style.backgroundColor = rgbFromTime(
+            now.getHours(),
+            now.getMinutes(),
+            now.getSeconds()
+        );
+    }
+
+    function adjustTimer(value) {
+        return value < 10 ? `0${value}` : `${value}`;
+    }
+
+    function rgbFromTime(hours, minutes, seconds) {
+        const ranges = [23, 59, 59];
+        const [r, g, b] = [hours, minutes, seconds].map((value, index) =>
+            Math.round((value / ranges[index]) * 255)
+        );
+        return `rgb(${r}, ${g}, ${b})`;
     }
 });
