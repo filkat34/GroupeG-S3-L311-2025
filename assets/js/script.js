@@ -1,9 +1,16 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     let is_run = "true";
 
-    init();
+    init(); // Lance la fonction d'initialisation des écouteurs d'événements
     setTimeInterval();
 
+    /*
+    Fonction qui permet d'initialiser les écouteurs d'événements
+    1. Ajoute un écouteur d'événement 'click' sur le bouton avec la classe 'button'
+    2. Lorsque le bouton est cliqué, il inverse l'état de la variable is_run (true/false)
+    3. Si is_run est true, il ajoute la classe 'pause' au bouton
+    4. Si is_run est false, il supprime la classe 'pause' au bouton
+     */
     function init() {
         document.querySelector('.button').addEventListener('click', (event) => {
             is_run = !is_run;
@@ -11,6 +18,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 
+    /*
+    Fonction qui permet de mettre à jour l'horloge
+     */
     function setTimeInterval() {
         setInterval(function () {
             if (is_run) {
