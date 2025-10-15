@@ -30,7 +30,7 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 | 18/10-19/10 | **Finalisation de la rédaction du CR** dans le README.md de la branche main | 
 
 ## Tests fonctionnels manuels (checklist)
-| Fonctionnalité/Branche | Mathilde | Kamo | Matthieu | Filippos |   
+| Fonctionnalité/Branche | Mathilde | Kamo | Mathieu | Filippos |   
 | :---|:---:|:---:| :---:| :---:|
 |Pas d’erreur JavaScript dans la console.| | | |✅|
 |La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.| | | |✅|
