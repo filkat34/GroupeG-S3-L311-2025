@@ -5,11 +5,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const minutesElement = document.querySelector("#minutes");
   const secondsElement = document.querySelector("#seconds");
 
+  if (!button || !hoursElement || !minutesElement || !secondsElement) {
+    console.error("Éléments du minuteur introuvables.");
+    return;
+  }
+
   init();
 
   function init() {
-    button?.addEventListener("click", toggleRunState);
-    button?.classList.toggle("pause", isRunning);
+    button.addEventListener("click", toggleRunState);
+    button.classList.toggle("pause", isRunning);
     updateClock();
     setInterval(() => {
       if (isRunning) {
@@ -20,7 +25,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function toggleRunState() {
     isRunning = !isRunning;
-    button?.classList.toggle("pause", isRunning);
+    button.classList.toggle("pause", isRunning);
+    if (isRunning) {
+      updateClock();
+    }
   }
 
   function updateClock() {
