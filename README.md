@@ -130,13 +130,13 @@ Nous avons également ajouté des attributs _aria-live_ pour rendre l'horloge pl
 
 ### Qualité du code
 Selon les choix des uns et des autres, de nombreuses modifications ont été apportées dans le but d'optimiser la qualité et la lisibilité du code. En voici quelques exemples :
-|    |    |
+| Optimisation | Description |
 | :---|:---|
-| Lisibilité | Dans les fichiers _index_ et _styles_ le code a été mal formaté : pas de sauts de ligne, mauvaise indentation. Nous avons utilisé l'option "Format Document" de VS Code pour rétablir une mise en page lisible   |
+| Lisibilité | Dans les fichiers _index_ et _styles_ le code a été mal formaté : pas de sauts de ligne, mauvaise indentation. Nous avons utilisé l'option "Format Document" de VS Code pour rétablir une mise en page lisible |
 | DRY | Dans le fichier _script_ le code a tendance à se répéter, notamment concernant les sélecteurs permettant la manipulation du DOM. Nous avons choisi de créer des variables au début du fichier pour les sauvegarder et éviter de les répéter. |
 | KISS | Que ce soit au niveau du HTML qui multiplie les ```<div>``` ou du CSS qui multiplie les classes, nous avons chosi de refactoriser pour raccourcir et simplifier le code. Par exemple, l'insértion d'élements dans le DOM via le CSS (les séparateurs) nous a paru le meilleur moyen de complexifier à outrance le code et de le rendre vulnérable aux bogues d'affichage : le CSS est sensible à l'ordre des sélecteurs et multiplier les sources du contenu n'est jamais une bonne idée car cela rend le code plus difficilement maintenable.
 | Accessibilité | Au niveau du css nous avons préféré utiliser des mesures relatives (em et non px) ce qui rend l'interface plus flexible et responsive. |
-| Documentation | Nous avons également ajouté des commentaires dans notre code afin de faciliter sa maintenabilité |
+| Documentation | Nous avons également ajouté des commentaires dans notre code afin de faciliter sa maintenabilité. |
 
 ## Tests fonctionnels manuels
 | Fonctionnalité/Branche | Mathilde | Kamo | Mathieu | Filippos |   
