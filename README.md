@@ -54,7 +54,7 @@ Quelques erreurs ont été trouvées concernant l'extension du fichier index qui
 | index  | _index.php_	| Renommer l'extension incorrecte du fichier en _index.**html**_ |
 | index	 | _asset/css/style.css_| Correction de la coquille dans le nom du dossier _asset**s**/css/style.css_ |
 ### Syntaxe
-De nombreux erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles typographiques, d'oublis de fermeture de balises et d'accolades ou des noms de fonctions javascript erronés.
+De nombreuses erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles typographiques, d'oublis de fermeture de balises et d'accolades ou des noms de fonctions javascript erronés.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 | index  |_```<title>Timetitle>```_| Rétablissment de la balise fermante _```<title>Timetitle</title>```_ |
