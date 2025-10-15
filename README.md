@@ -29,7 +29,7 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 | 17/10		  | **Code review n. 2** pour discussion autour des pull requests et merge dans main |   
 | 18/10-19/10 | **Finalisation de la rédaction du CR** dans le README.md de la branche main | 
 
-## Test fonctionnels manuels (checklist)
+## Tests fonctionnels manuels (checklist)
 | Fonctionnalité/Branche | Mathilde | Kamo | Matthieu | Filippos |   
 | :---|:---:|:---:| :---:| :---:|
 |Pas d’erreur JavaScript dans la console.| | | |✅|
