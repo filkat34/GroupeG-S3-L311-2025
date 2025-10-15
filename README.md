@@ -59,7 +59,7 @@ De nombreux erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles 
 | :----- | :------ | :------  |
 | index  |_```<title>Timetitle>```_| Rétablissment de la balise fermante _```<title>Timetitle</title>```_ |
 | styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
-| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Rétablissment de la parenthèse fermante ainsi que du nom correct de la fonction Javascript_```setInterval(function(){ ... }, 1000);```_ |
+| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Rétablissment de la parenthèse fermante ainsi que du nom correct de la fonction Javascript _```setInterval(function(){ ... }, 1000);```_ |
 ### Structure
 ### Logique
 ### Interaction
