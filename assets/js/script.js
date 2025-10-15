@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  // Elements du DOM
+  // Éléments du DOM
   const btn = document.querySelector(".button");
   const body = document.querySelector("body");
   const hours = document.querySelector("#hours");
@@ -27,15 +27,15 @@ window.addEventListener("DOMContentLoaded", () => {
     // Mise à jour de l'heure et du fond toutes les secondes
     setInterval(function () {
       if (isRunning) {
-        let oDate = new Date();
-        hours.innerHTML = adjustTimer(oDate.getHours());
-        minutes.innerHTML = adjustTimer(oDate.getMinutes());
-        seconds.innerHTML = adjustTimer(oDate.getSeconds());
+        const oDate = new Date();
+        hours.textContent = adjustTimer(oDate.getHours());
+        minutes.textContent = adjustTimer(oDate.getMinutes());
+        seconds.textContent = adjustTimer(oDate.getSeconds());
 
         body.style.background = randomHexColor(
-          hours.innerHTML,
-          minutes.innerHTML,
-          seconds.innerHTML
+          parseInt(hours.textContent, 10),
+          parseInt(minutes.textContent, 10),
+          parseInt(seconds.textContent, 10)
         );
       }
     }, 1000);

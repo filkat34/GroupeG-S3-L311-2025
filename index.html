@@ -10,22 +10,22 @@
     <title>Horloge</title>
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="timer">
-            <span id="hours" aria-live="polite">00</span>
+        <div class="timer" role="clock" aria-live="off">
+            <span id="hours">00</span>
             <span class="separator">:</span>
-            <span id="minutes" aria-live="polite">00</span>
+            <span id="minutes">00</span>
             <span class="separator">:</span>
-            <span id="seconds" aria-live="polite">00</span>
+            <span id="seconds">00</span>
         </div>
         <div class="controls">
-            <button class="button pause" aria-label="Pause/Resume timer"></button>
+            <button class="button pause" aria-label="Mettre en pause/Reprendre le minuteur"></button>
         </div>
     </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

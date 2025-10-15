@@ -35,7 +35,7 @@ font-size: 4.69em;
 }
 
 .separator {
-        gap: 0.1em;
+    margin: 0 0.1em;
 }
 
 .controls {
