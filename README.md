@@ -12,14 +12,13 @@
   - 🔎 [Analyse du code source dans le navigateur](#analyse-du-code-source-dans-le-navigateur)
   - 📂 [Vérification des fichiers chargés](#vérification-des-fichiers-chargés)
   - 🎨 [Analyse et validation du HTML et du CSS](#analyse-et-validation-du-html-et-du-css)
-  - 🖥️ [Debug du JavaScript via la console du navigateur](#debug-du-javascript-via-la-console-du-navigateur)
-  - ✅ [Phase de test fonctionnel](#phase-de-test-fonctionnel)
-- ⚡ [Typologie des erreurs](#typologie-des-erreurs)
+  - 🔲 [Debug du JavaScript via la console du navigateur](#debug-du-javascript-via-la-console-du-navigateur)
+  - ✅ [Phase de tests](#phase-de-tests)
+- 🗃️ [Typologie des erreurs](#typologie-des-erreurs)
   - 📄 [Fichiers](#fichiers)
-  - ✏️ [Syntaxe](#syntaxe)
-  - 🧩 [Structure](#structure)
-  - 🧠 [Logique](#logique)
-  - 🔗 [Interaction](#interaction)
+  - 🧩 [Syntaxe](#syntaxe)
+  - 🔡 [Typographie](#typographie)
+  - 📐 [Logique](#logique)
   - 🖥️ [Affichage](#affichage)
   - 🧹 [Qualité du code](#qualité-du-code)
 - 🧪 [Tests fonctionnels manuels](#tests-fonctionnels-manuels)
@@ -82,13 +81,13 @@ La console a signalé des erreurs : fonctions invalides, fautes de frappe, absen
 
 ![exemple d'erreur JS de la console](screenshots/erreur-console.png)
 
-### Phase de test fonctionnel
+### Phase de tests
 Après correction, le rendu de la page et du design a été validé visuellement. L'horloge a été testée pour vérifier l’ensemble de ses fonctionnalités (voir [Tests fonctionnels manuels](#tests-fonctionnels-manuels)).
 
 Grâce à cette méthodologie structurée, combinant inspection manuelle, outils de développement du navigateur et vérification automatique via l’éditeur, l’ensemble des anomalies a été identifié et corrigé, aboutissant à un affichage fonctionnel et conforme au design attendu.
 
 ## Typologie des erreurs
-Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
+Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles. Il s'agit bien d'une typologie et non d'une liste exhaustive de toutes les erreurs corrigées.
 
 ### Fichiers
 Quelques erreurs ont été trouvées concernant l'extension du fichier index qui l'empêchait de s'afficher correctement ainsi qu'une coquille dans la saisie du chemin du fichier des styles.
@@ -96,20 +95,48 @@ Quelques erreurs ont été trouvées concernant l'extension du fichier index qui
 | :----- | :------ | :------  |
 | index  | _index.php_	| Renommer l'extension incorrecte du fichier en _index.**html**_ |
 | index	 | _asset/css/style.css_| Correction de la coquille dans le nom du dossier _asset**s**/css/style.css_ |
+
 ### Syntaxe
-De nombreuses erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles typographiques, d'oublis de fermeture de balises et d'accolades ou des noms de fonctions javascript erronés.
+De nombreuses erreurs de syntaxe ont été corrigées : oublis de fermeture de balises et d'accolades principalement.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 | index  |_```<title>Timetitle>```_| Ajout de la balise fermante _```<title>Timetitle</title>```_ |
 | styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
-| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Ajout de la parenthèse fermante et correction du nom de la fonction Javascript _```setInterval(function(){ ... }, 1000);```_ |
-### Structure
+| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Ajout de la parenthèse fermante (et correction du nom de la fonction Javascript) _```setInterval(function(){ ... }, 1000);```_ |
 
+### Typographie
+De nombreuses coquilles typographiques ont été rectifiées : inversions ou oublis de lettres principalement.
+| Fichier| Exemple | Solution |
+| :----- | :------ | :------  |
+|styles| ```#wrappr{``` | Ajout de la lettre manquante ```#wrapper{```|
+|script| ```addEventListener('clic', (event) =>...``` | | Ajout de la lettre manquante ```addEventListener('click', (event) =>...```|
+|script| ```dcument.querySelector('.button')``` | | Ajout de la lettre manquante ```document.querySelector('.button')```|
 
 ### Logique
-### Interaction
+Quelques incohérences dans le typage des variables et dans la structurations des fonctions ont été trouvées.
+| Fichier| Exemple | Solution |
+| :----- | :------ | :------  |
+| script | ```let is_run = "true"``` | La variable aurait dû être un boléen sinon elle sera toujours false. Il suffit d'enlever les guillemets : ```let is_run = true``` |
+| script |  ```function randomHexColor(x, y)``` | La signature de la fonction comporte trois arguments paramètres alors que son corps et son appel utilisent trois arguments. Il faut rétablir le troisième au niveau de la signature :  ```function randomHexColor(x, y, z)``` |
+|script | ```function adjustTimer(timer){(timer < 10 ? '0'+timer : timer);}``` | Le _return_ de la fonction a été oublié : ```function adjustTimer(timer){return (timer < 10 ? '0'+ timer : timer);}``` |
+| index | ```<div id="wrapper"><div class="inside" id="wrapper">``` | Deux éléments dans la structure ont le même _id_ qui est censé être unique. Il faut soit renommer l'un des deux ou refactoriser. |
+
 ### Affichage
+Concernant l'affichage, en plus de nombreuses erreurs typographiques, nous avons constaté une mauvaise utilisation de certaines propriétés, notamment de flexbox. Mais une fois ces problèmes résolus, le principal défi a été de faire en sorte que le bouton qui bascule entre deux formes qui n'occupent pas le même espace, ne pousse pas les autres éléments du DOM. Nous avons réussi à faire cela en attribuant au bouton une hauteur et une largeur fixes.
+
+Des optimisations ont été faites au niveau de l'affichage responsive en ajoutant une media query pour les petits écrans.
+
+Nous avons également ajouté des attributs _aria-live_ pour rendre l'horloge plus accessible en avertissant les utilisateurs utilsant les lecteurs d'écran des champs susceptibles d'être dynamiquement modifiés.
+
 ### Qualité du code
+Selon les choix des uns et des autres, de nombreuses modifications ont été apportées dans le but d'optimiser la qualité et la lisibilité du code. En voici quelques exemples :
+
+| :---|:---|
+| Lisibilité | Dans les fichiers _index_ et _styles_ le code a été mal formaté : pas de sauts de ligne, mauvaise indentation. Nous avons utilisé l'option "Format Document" de VS Code pour rétablir une mise en page lisible   |
+| DRY | Dans le fichier _script_ le code a tendance à se répéter, notamment concernant les sélecteurs permettant la manipulation du DOM. Nous avons choisi de créer des variables au début du fichier pour les sauvegarder et éviter de les répéter. |
+| KISS | Que ce soit au niveau du HTML qui multiplie les ```<div>``` ou du CSS qui multiplie les classes, nous avons chosi de refactoriser pour raccourcir et simplifier le code. Par exemple, l'insértion d'élements dans le DOM via le CSS (les séparateurs) nous a paru le meilleur moyen de complexifier à outrance le code et de le rendre vulnérable aux bogues d'affichage : le CSS est sensible à l'ordre des sélecteurs et multiplier les sources du contenu n'est jamais une bonne idée car cela rend le code plus difficilement maintenable.
+| Accessibilité | Au niveau du css nous avons préféré utiliser des mesures relatives (em et non px) ce qui rend l'interface plus flexible et responsive. |
+| Documentation | Nous avons également ajouté des commentaires dans notre code afin de faciliter sa maintenabilité |
 
 ## Tests fonctionnels manuels
 | Fonctionnalité/Branche | Mathilde | Kamo | Mathieu | Filippos |   
