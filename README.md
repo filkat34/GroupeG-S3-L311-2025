@@ -25,12 +25,12 @@
 
 ## Membres du groupe
 
-| Etudiant.e  |  Alias      |    
-| :----------:|:-----------:| 
-| Mathilde C. | Clouddy23   | 
-| Kamo G.     | Spaghette5  |   
-| Mathieu L.  | mathleys    |   
-| Filippos K. | filkat34    | 
+| Etudiant.e  |  Alias      |  Branche      |    
+| :----------:|:-----------:| :-----------:|
+| Mathilde C. | Clouddy23   | bugfix/mathilde |
+| Kamo G.     | Spaghette5  | bugfix/kamo |
+| Mathieu L.  | mathleys    | bugfix/mathieu | 
+| Filippos K. | filkat34    | bugfix/filippos |
 
 ## Travail collaboratif
 
