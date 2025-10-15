@@ -47,7 +47,7 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 ## Méthodes de débogage employées
 ## Typologie des erreurs
 Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
-### Gestion des fichiers
+### Fichiers
 Quelques erreurs ont été trouvées concernant l'extension du fichier index qui l'empêchait de s'afficher correctement ainsi qu'une coquille dans la saisie du chemin du fichier des styles.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
