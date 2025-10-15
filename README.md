@@ -32,17 +32,17 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 ## Test fonctionnels manuels (checklist)
 | Fonctionnalité/Branche | Mathilde | Kamo | Matthieu | Filippos |   
 | :---|:---:|:---:| :---:| :---:|
-|Pas d’erreur JavaScript dans la console.|[]|[]|[]|- [x]|
-|La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.|[]|[]|[]|- [x]|
-|Les séparateurs (:) sont visibles.|[]|[]|[]|- [x]|
-|L’heure, les minutes et les secondes se mettent à jour chaque seconde.|[]|[]|[]|- [x]|
-|Le fond change progressivement en fonction de l’heure.|[]|[]|[]|- [x]|
-|Cliquer sur le bouton met le timer en pause (l’heure n’avance plus).|[]|[]|[]|- [x]|
-|Cliquer à nouveau sur le bouton relance le timer.|[]|[]|[]|- [x]|
-|Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|[]|[]|[]|- [x]|
-|L'horloge reste lisible et centré, sans débordement.|[]|[]|[]|- [x]|
-|L'affichage de l'horloge s'adapte correctemnt sur de plus petits écrans (mobile, tablette).|[]|[]|[]|- [x]|
-|Lorsque le bouton bascule entre play/pause il ne pousse pas les autres éléments du DOM |[]|[]|[]|- [x]|
+|Pas d’erreur JavaScript dans la console.| | | |✅|
+|La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.| | | |✅|
+|Les séparateurs (:) sont visibles.| | | |✅|
+|L’heure, les minutes et les secondes se mettent à jour chaque seconde.| | | |✅|
+|Le fond change progressivement en fonction de l’heure.| | | |✅|
+|Cliquer sur le bouton met le timer en pause (l’heure n’avance plus).| | | |✅|
+|Cliquer à nouveau sur le bouton relance le timer.| | | |✅|
+|Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.| | | |✅|
+|L'horloge reste lisible et centré, sans débordement.| | | |✅|
+|L'affichage de l'horloge s'adapte correctemnt sur de plus petits écrans (mobile, tablette).| | | |✅|
+|Lorsque le bouton bascule entre play/pause il ne pousse pas les autres éléments du DOM | | | |✅|
 
 
 ## Méthodes de débogage employées
