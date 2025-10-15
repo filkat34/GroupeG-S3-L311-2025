@@ -109,8 +109,8 @@ De nombreuses coquilles typographiques ont été rectifiées : inversions ou oub
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 |styles| ```#wrappr{``` | Ajout de la lettre manquante ```#wrapper{```|
-|script| ```addEventListener('clic', (event) =>...``` | | Ajout de la lettre manquante ```addEventListener('click', (event) =>...```|
-|script| ```dcument.querySelector('.button')``` | | Ajout de la lettre manquante ```document.querySelector('.button')```|
+|script| ```addEventListener('clic', (event) =>...``` | Ajout de la lettre manquante ```addEventListener('click', (event) =>...```|
+|script| ```dcument.querySelector('.button')``` | Ajout de la lettre manquante ```document.querySelector('.button')```|
 
 ### Logique
 Quelques incohérences dans le typage des variables et dans la structurations des fonctions ont été trouvées.
