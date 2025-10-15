@@ -45,6 +45,29 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 |Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
 
 ## Méthodes de débogage employées
+Pour identifier et corriger les problèmes, plusieurs méthodes de debug ont été employées :
+
+1. Analyse du fichier HTML :
+À l’ouverture de l’application, le navigateur affichait uniquement l’arborescence des fichiers, au lieu de charger automatiquement le fichier index.html. Cette anomalie a été attribuée à une erreur dans l’extension du fichier.
+
+2. Analyse du code source dans le navigateur :
+L’inspection du HTML a permis de détecter que le contenu attendu entre les balises <body> n’était pas présent. Cette étape a mis en évidence des erreurs structurelles qui pouvaient perturber le rendu de la page.
+
+3. Vérification des fichiers chargés :
+L’inspection du réseau a montré que seul index.html était chargé.Les appels au fichier CSS et à Google Fonts ont été contrôlés, révélant des fautes de frappe empêchant le chargement correct du design.
+
+4. Analyse et validation du HTML et du CSS :
+Les fichiers ont été examinés pour vérifier le nesting des éléments, la fermeture correcte des balises et la cohérence de la syntaxe. L’éditeur VS Code a été utilisé pour détecter automatiquement les erreurs de syntaxe, les fautes de frappe et les incohérences dans le CSS.
+
+5. Debug du JavaScript via la console du navigateur :
+La console a signalé des erreurs : fonctions invalides, fautes de frappe, absence de fermetures et erreurs de type. Chaque erreur a été corrigée de manière ciblée, en suivant les messages de la console.
+
+6. Phase de test fonctionnel
+Après correction, le rendu de la page et du design a été validé visuellement.Le Timer a été testé pour vérifier l’ensemble de ses fonctionnalités (affichage des heures, minutes et secondes, contrôle Play/Pause et mise à jour dynamique du fond).
+
+Grâce à cette méthodologie structurée, combinant inspection manuelle, outils de développement du navigateur et vérification automatique via l’éditeur, l’ensemble des anomalies a été identifié et corrigé, aboutissant à un affichage fonctionnel et conforme au design attendu.
+
+
 ## Typologie des erreurs
 Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
 ### Fichiers
@@ -61,6 +84,8 @@ De nombreuses erreurs de syntaxe on été corrigées, qu'il s'agisse de coquille
 | styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
 | script |_```.setTimeInterval(function(){ ... }, 1000;```_| Ajout de la parenthèse fermante et correction du nom de la fonction Javascript _```setInterval(function(){ ... }, 1000);```_ |
 ### Structure
+
+
 ### Logique
 ### Interaction
 ### Affichage
