@@ -29,58 +29,43 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 | 17/10		  | **Code review n. 2** pour discussion autour des pull requests et merge dans main |   
 | 18/10-19/10 | **Finalisation de la rédaction du CR** dans le README.md de la branche main | 
 
-## Tests fonctionnels manuels (checklist)
-| Fonctionnalité/Branche | Mathilde | Kamo | Mathieu | Filippos |   
-| :---|:---:|:---:| :---:| :---:|
-|Pas d’erreur JavaScript dans la console.|✅| |✅|✅|
-|La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.|✅| |✅|✅|
-|Les séparateurs (:) sont visibles.|✅| |✅|✅|
-|L’heure, les minutes et les secondes se mettent à jour chaque seconde.|✅| |✅|✅|
-|La couleur du fond change progressivement en fonction de l’heure.|✅| |✅|✅|
-|Cliquer sur le bouton met l'horloge en pause (l’heure n’avance plus).|✅| |✅|✅|
-|Cliquer à nouveau sur le bouton relance l'horloge.|✅| |✅|✅|
-|Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|✅| |✅|✅|
-|L'horloge reste lisible et centrée, sans débordement.|✅| |✅|✅|
-|L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
-|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
-
 ## Méthodes de débogage employées
 Pour identifier et corriger les problèmes, plusieurs méthodes de debug ont été employées :
 
-### Analyse du fichier HTML :
-À l’ouverture de l’application, le navigateur affichait uniquement l’arborescence des fichiers, au lieu de charger automatiquement le fichier index.html. Cette anomalie a été attribuée à une erreur dans l’extension du fichier.
+### Analyse du fichier HTML
+À l’ouverture de l’application, le navigateur affichait uniquement l’arborescence des fichiers, au lieu de charger automatiquement le fichier _index.html_. Cette anomalie a été attribuée à une erreur dans l’extension du fichier.
 
 ![<arborescencde de fichiers](screenshots/arborescence.png)
 
-### Analyse du code source dans le navigateur :
-L’inspection du HTML a permis de détecter que le contenu attendu entre les balises <body> n’était pas présent. Cette étape a mis en évidence des erreurs structurelles qui pouvaient perturber le rendu de la page.
+### Analyse du code source dans le navigateur
+L’inspection du HTML a permis de détecter que le contenu attendu entre les balises ```<body>``` n’était pas présent. Cette étape a mis en évidence des erreurs structurelles qui pouvaient perturber le rendu de la page.
 
 ![balise body vide](screenshots/erreur-balise-body.png)
 
-### Vérification des fichiers chargés :
-L’inspection du réseau a montré que seul index.html était chargé.Les appels au fichier CSS et à Google Fonts ont été contrôlés, révélant des fautes de frappe empêchant le chargement correct du design.
+### Vérification des fichiers chargés
+L’inspection du réseau a montré que seul _index.html_ était chargé. Les appels au fichier CSS et à Google Fonts ont été contrôlés, révélant des fautes de frappe empêchant le chargement correct du design.
 
 ![erreur de chargement des fichiers](screenshots/erreur-chargement-fichiers.png)
 ![erreur CSS détectée sur le réseau](screenshots/erreur-reseau-CSS.png)
 
-### Analyse et validation du HTML et du CSS :
+### Analyse et validation du HTML et du CSS
 Les fichiers ont été examinés pour vérifier le nesting des éléments, la fermeture correcte des balises et la cohérence de la syntaxe. L’éditeur VS Code a été utilisé pour détecter automatiquement les erreurs de syntaxe, les fautes de frappe et les incohérences dans les fichiers.
 
 ![erreurs CSS détectées sur VS Code](screenshots/erreurs-CSS.png)
 
-### Debug du JavaScript via la console du navigateur :
+### Debug du JavaScript via la console du navigateur
 La console a signalé des erreurs : fonctions invalides, fautes de frappe, absence de fermetures et erreurs de type. Chaque erreur a été corrigée de manière ciblée, en suivant les messages de la console.
 
 ![exemple d'erreur JS de la console](screenshots/erreur-console.png)
 
-### Phase de test fonctionnel :
-Après correction, le rendu de la page et du design a été validé visuellement.Le Timer a été testé pour vérifier l’ensemble de ses fonctionnalités (affichage des heures, minutes et secondes, contrôle Play/Pause et mise à jour dynamique du fond).
+### Phase de test fonctionnel
+Après correction, le rendu de la page et du design a été validé visuellement. L'horloge a été testée pour vérifier l’ensemble de ses fonctionnalités (voir [Tests fonctionnels manuels](#tests-fonctionnels-manuels)).
 
 Grâce à cette méthodologie structurée, combinant inspection manuelle, outils de développement du navigateur et vérification automatique via l’éditeur, l’ensemble des anomalies a été identifié et corrigé, aboutissant à un affichage fonctionnel et conforme au design attendu.
 
-
 ## Typologie des erreurs
 Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
+
 ### Fichiers
 Quelques erreurs ont été trouvées concernant l'extension du fichier index qui l'empêchait de s'afficher correctement ainsi qu'une coquille dans la saisie du chemin du fichier des styles.
 | Fichier| Exemple | Solution |
@@ -101,3 +86,18 @@ De nombreuses erreurs de syntaxe on été corrigées, qu'il s'agisse de coquille
 ### Interaction
 ### Affichage
 ### Qualité du code
+
+## Tests fonctionnels manuels
+| Fonctionnalité/Branche | Mathilde | Kamo | Mathieu | Filippos |   
+| :---|:---:|:---:| :---:| :---:|
+|Pas d’erreur JavaScript dans la console.|✅| |✅|✅|
+|La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.|✅| |✅|✅|
+|Les séparateurs (:) sont visibles.|✅| |✅|✅|
+|L’heure, les minutes et les secondes se mettent à jour chaque seconde.|✅| |✅|✅|
+|La couleur du fond change progressivement en fonction de l’heure.|✅| |✅|✅|
+|Cliquer sur le bouton met l'horloge en pause (l’heure n’avance plus).|✅| |✅|✅|
+|Cliquer à nouveau sur le bouton relance l'horloge.|✅| |✅|✅|
+|Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|✅| |✅|✅|
+|L'horloge reste lisible et centrée, sans débordement.|✅| |✅|✅|
+|L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
+|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
