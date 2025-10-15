@@ -1,4 +1,4 @@
-# Simple Time - UE L311 - Semaine 3 - Group G
+# Simple Time - UE L311 - Semaine 3 - Groupe G
 
 ## Membres du groupe
 
@@ -36,24 +36,30 @@ Un travail d'harmonisation est prévu dans le cadre de la deuxième code review 
 |La page affiche l’heure, les minutes et les secondes à 00:00:00 au chargement.| | | |✅|
 |Les séparateurs (:) sont visibles.| | | |✅|
 |L’heure, les minutes et les secondes se mettent à jour chaque seconde.| | | |✅|
-|Le fond change progressivement en fonction de l’heure.| | | |✅|
-|Cliquer sur le bouton met le timer en pause (l’heure n’avance plus).| | | |✅|
-|Cliquer à nouveau sur le bouton relance le timer.| | | |✅|
+|La couleur du fond change progressivement en fonction de l’heure.| | | |✅|
+|Cliquer sur le bouton met l'horloge en pause (l’heure n’avance plus).| | | |✅|
+|Cliquer à nouveau sur le bouton relance l'horloge.| | | |✅|
 |Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.| | | |✅|
 |L'horloge reste lisible et centré, sans débordement.| | | |✅|
 |L'affichage de l'horloge s'adapte correctemnt sur de plus petits écrans (mobile, tablette).| | | |✅|
-|Lorsque le bouton bascule entre play/pause il ne pousse pas les autres éléments du DOM | | | |✅|
-
+|Lorsque le bouton bascule entre play/pause il ne pousse pas les autres éléments du DOM. | | | |✅|
 
 ## Méthodes de débogage employées
 ## Typologie des erreurs
 Nous avons établi ci-dessous une typologie des erreurs trouvées avec quelques exemples pour chacune d'entre elles.
 ### Gestion des fichiers
+Quelques erreurs ont été trouvées concernant l'extension du fichier index qui l'empêchait de s'afficher correctement ainsi qu'une coquille dans la saisie du chemin du fichier des styles.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 | index  | _index.php_	| Renommer l'extension incorrecte du fichier en _index.**html**_ |
 | index	 | _asset/css/style.css_| Correction de la coquille dans le nom du dossier _asset**s**/css/style.css_ |
 ### Syntaxe
+De nombreux erreurs de syntaxe on été corrigées, qu'il s'agisse de coquilles typographiques, d'oublis de fermeture de balises et d'accolades ou des noms de fonctions javascript erronés.
+| Fichier| Exemple | Solution |
+| :----- | :------ | :------  |
+| index  |_```<title>Timetitle>```_| Rétablissment de la balise fermante _```<title>Timetitle</title>```_ |
+| styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
+| script |_```.setTimeInterval(function(){ ... }, 1000;```_| Rétablissment de la parenthèse fermante ainsi que du nom correct de la fonction Javascript_```setInterval(function(){ ... }, 1000);```_ |
 ### Structure
 ### Logique
 ### Interaction
