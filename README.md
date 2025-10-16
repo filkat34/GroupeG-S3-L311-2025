@@ -23,7 +23,7 @@
   - 🖥️ [Affichage](#affichage)
   - 🧹 [Qualité du code](#qualité-du-code)
 - 🧪 [Tests fonctionnels manuels](#tests-fonctionnels-manuels)
-- 📈 [Bilan et perspectives d'amélioration](#bilan-et-perspectives-d'amelioration)
+- 📈 [Bilan et perspectives](#bilan-et-perspectives)
 
 ## Membres du groupe
 
@@ -161,7 +161,7 @@ Selon les choix des uns et des autres, de nombreuses modifications ont été app
 |L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
 |Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
 
-## Bilan et perspectives d'amélioration
+## Bilan et perspectives
 Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablis conformément aux consignes de l'exercice. 
 
 Tous les membres du groupe ont montré de l'implication dans le travail demandé. Des échanges ont eu lieu, à la fois lors des deux visios programmées sur Teams et régulièrement sur Whatsapp. 
