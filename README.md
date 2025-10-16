@@ -23,7 +23,7 @@
   - 🖥️ [Affichage](#affichage)
   - 🧹 [Qualité du code](#qualité-du-code)
 - 🧪 [Tests fonctionnels manuels](#tests-fonctionnels-manuels)
-- 📈 [Bilan et perspectives d'amélioration](#bilan-et-perspectives-d'-amelioration)
+- 📈 [Bilan et perspectives d'amélioration](#bilan-et-perspectives-d'amelioration)
 
 ## Membres du groupe
 
