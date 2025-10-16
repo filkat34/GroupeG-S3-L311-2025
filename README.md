@@ -101,7 +101,7 @@ De nombreuses erreurs de syntaxe ont été corrigées : oublis de fermeture de b
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 | index  |_```<title>Timetitle>```_| Ajout de la balise fermante _```<title>Timetitle</title>```_ |
-| styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
+| styles |_```.inside font-weight: bold; font-size: 75px;;}```_| Ajout de l'accolade ouvrante et suppression du point virgule en double. Corrigé en _```.inside { font-weight: bold; font-size: 75px; }```_|
 | script |_```.setTimeInterval(function(){ ... }, 1000;```_| Ajout de la parenthèse fermante (et correction du nom de la fonction Javascript) _```setInterval(function(){ ... }, 1000);```_ |
 
 ### Typographie
@@ -113,29 +113,30 @@ De nombreuses coquilles typographiques ont été rectifiées : inversions ou oub
 |script| ```dcument.querySelector('.button')``` | Ajout de la lettre manquante ```document.querySelector('.button')```|
 
 ### Logique
-Quelques incohérences dans le typage des variables et dans la structurations des fonctions ont été trouvées.
+Quelques incohérences dans le typage des variables et dans la structuration des fonctions ont été trouvées.
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
-| script | ```let is_run = "true"``` | La variable aurait dû être un boléen sinon elle sera toujours false. Il suffit d'enlever les guillemets : ```let is_run = true``` |
-| script |  ```function randomHexColor(x, y)``` | La signature de la fonction comporte trois arguments paramètres alors que son corps et son appel utilisent trois arguments. Il faut rétablir le troisième au niveau de la signature :  ```function randomHexColor(x, y, z)``` |
+| script | ```let is_run = "true"``` | La variable doit être un boléen sinon elle sera toujours _false_. Il suffit d'enlever les guillemets : ```let is_run = true``` |
+| script |  ```function randomHexColor(x, y)``` | La signature de la fonction comporte trois paramètres alors que son corps et son appel utilisent trois arguments. Il faut rétablir le troisième au niveau de la signature :  ```function randomHexColor(x, y, z)``` |
 |script | ```function adjustTimer(timer){(timer < 10 ? '0'+timer : timer);}``` | Le _return_ de la fonction a été oublié : ```function adjustTimer(timer){return (timer < 10 ? '0'+ timer : timer);}``` |
 | index | ```<div id="wrapper"><div class="inside" id="wrapper">``` | Deux éléments dans la structure ont le même _id_ qui est censé être unique. Il faut soit renommer l'un des deux ou refactoriser. |
 
 ### Affichage
-Concernant l'affichage, en plus de nombreuses erreurs typographiques, nous avons constaté une mauvaise utilisation de certaines propriétés, notamment de flexbox. Mais une fois ces problèmes résolus, le principal défi a été de faire en sorte que le bouton qui bascule entre deux formes qui n'occupent pas le même espace, ne pousse pas les autres éléments du DOM. Nous avons réussi à faire cela en attribuant au bouton une hauteur et une largeur fixes.
+Concernant l'affichage, en plus de nombreuses erreurs typographiques, nous avons constaté une mauvaise utilisation de certaines propriétés, notamment de _flexbox_. Mais une fois ces problèmes résolus, le principal défi a été de faire en sorte que le bouton qui bascule entre deux formes qui n'occupent pas le même espace, ne pousse pas les autres éléments du DOM. Nous avons réussi à faire cela en attribuant au bouton une hauteur et une largeur fixes.
 
 Des optimisations ont été faites au niveau de l'affichage responsive en ajoutant une media query pour les petits écrans.
 
-Nous avons également ajouté des attributs _aria-live_ pour rendre l'horloge plus accessible en avertissant les utilisateurs utilsant les lecteurs d'écran des champs susceptibles d'être dynamiquement modifiés.
+Nous avons également ajouté des attributs _aria-live_ pour rendre l'horloge plus accessible en avertissant les utilisateurs ayant recrous à des lecteurs d'écran des champs susceptibles d'être dynamiquement modifiés.
 
 ### Qualité du code
 Selon les choix des uns et des autres, de nombreuses modifications ont été apportées dans le but d'optimiser la qualité et la lisibilité du code. En voici quelques exemples :
 | Optimisation | Description |
 | :---|:---|
 | Lisibilité | Dans les fichiers _index_ et _styles_ le code a été mal formaté : pas de sauts de ligne, mauvaise indentation. Nous avons utilisé l'option "Format Document" de VS Code pour rétablir une mise en page lisible |
+| Standardisation | Usage de lowerCamelCase pour les variables.
 | DRY | Dans le fichier _script_ le code a tendance à se répéter, notamment concernant les sélecteurs permettant la manipulation du DOM. Nous avons choisi de créer des variables au début du fichier pour les sauvegarder et éviter de les répéter. |
 | KISS | Que ce soit au niveau du HTML qui multiplie les ```<div>``` ou du CSS qui multiplie les classes, nous avons chosi de refactoriser pour raccourcir et simplifier le code. Par exemple, l'insértion d'élements dans le DOM via le CSS (les séparateurs) nous a paru le meilleur moyen de complexifier à outrance le code et de le rendre vulnérable aux bogues d'affichage : le CSS est sensible à l'ordre des sélecteurs et multiplier les sources du contenu n'est jamais une bonne idée car cela rend le code plus difficilement maintenable.
-| Accessibilité | Au niveau du css nous avons préféré utiliser des mesures relatives (em et non px) ce qui rend l'interface plus flexible et responsive. |
+| Accessibilité | Au niveau du CSS nous avons préféré utiliser des mesures relatives (em et non px) ce qui rend l'interface plus flexible et responsive. |
 | Documentation | Nous avons également ajouté des commentaires dans notre code afin de faciliter sa maintenabilité. |
 
 ## Tests fonctionnels manuels
