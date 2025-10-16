@@ -1,32 +1,64 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    let is_run    = "true";
+window.addEventListener("DOMContentLoaded", () => {
+  // Lance l'initialisation quand la page est prête
+  let isRunning = true;
+  const button = document.querySelector(".controls .button");
+  const hoursElement = document.querySelector("#hours");
+  const minutesElement = document.querySelector("#minutes");
+  const secondsElement = document.querySelector("#seconds");
 
-    init();
+  if (!button || !hoursElement || !minutesElement || !secondsElement) {
+    // Signale une configuration invalide et stoppe tout
+    console.error("Éléments du minuteur introuvables.");
+    return;
+  }
 
-    function init(){
-       document.querySelector('.button').addEventListener('clic', (event) => 
-            is_run = !is_run
-            ((' ' + document.querySelector('.button').className + ' ').indexOf('pause') > -1) ? dcument.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class').replace(' pause', '')) : document.querySelector('.button').setAttribute('class', document.querySelector('.button').getAttribute('class')+' pause');
-        })
+  init();
 
-        setTimeInterval(function(){
-            if(is_run){
-                let oDate = new Date();
-                document.querySelector('#hours').innerHTML   =  adjustTimer(oDate.getHours());
-                document.querySelector('#minutes').innerHTML =  adjustTimer(oDate.getMinutes());
-                document.querySelector('#seconds').innerHTML =  adjustTimer( oDate.getSeconds());
+  function init() {
+    // Configure les interactions et la mise à jour périodique
+    button.addEventListener("click", toggleRunState);
+    button.classList.toggle("pause", isRunning);
+    updateClock();
+    setInterval(() => {
+      if (isRunning) {
+        updateClock();
+      }
+    }, 1000);
+  }
 
-                document.querySelector('body').style.background = randomHexColor(document.querySelector('#hours').innerHTML, document.querySelector('#minutes').innerHTML, document.querySelector('#seconds').innerHTML);
-                
-            }
-        }, 1000;
+  function toggleRunState() {
+    // Bascule entre pause et lecture
+    isRunning = !isRunning;
+    button.classList.toggle("pause", isRunning);
+    if (isRunning) {
+      updateClock();
     }
+  }
 
-    function adjustTimer(timer){
-        (timer < 10 ? '0'+timer : timer);
-    }
+  function updateClock() {
+    // Rafraîchit l'heure affichée et la couleur du fond
+    const now = new Date();
+    hoursElement.textContent = adjustTimer(now.getHours());
+    minutesElement.textContent = adjustTimer(now.getMinutes());
+    secondsElement.textContent = adjustTimer(now.getSeconds());
+    document.body.style.backgroundColor = rgbFromTime(
+      now.getHours(),
+      now.getMinutes(),
+      now.getSeconds()
+    );
+  }
 
-    function randomHexColor(x, y){
-        return "rgb(" + Math.floor(x/100 * 256) + "," + Math.floor(y/100 * 256) + "," + Math.floor(z/100 * 256) + ")";
-    }
+  function adjustTimer(value) {
+    // Force un affichage sur deux chiffres
+    return value < 10 ? `0${value}` : `${value}`;
+  }
+
+  function rgbFromTime(hours, minutes, seconds) {
+    // Transforme l'heure en composantes RGB
+    const ranges = [23, 59, 59];
+    const [r, g, b] = [hours, minutes, seconds].map((value, index) =>
+      Math.round((value / ranges[index]) * 255)
+    );
+    return `rgb(${r}, ${g}, ${b})`;
+  }
 });
