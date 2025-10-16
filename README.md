@@ -162,12 +162,12 @@ Selon les choix des uns et des autres, de nombreuses modifications ont été app
 |Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
 
 ## Bilan et perspectives
-Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablis conformément aux consignes de l'exercice. 
+Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablies conformément aux consignes de l'exercice. 
 
 Tous les membres du groupe ont montré de l'implication dans le travail demandé. Des échanges ont eu lieu, à la fois lors des deux visios programmées sur Teams et régulièrement sur Whatsapp. 
 
 Tous les membres du groupe maîtrisent les différentes méthodes de déboggage, le client GIT (commit, création et gestion de branches, etc.) et les fonctionnalités de collaboration offertes par Github.
 
-Tout le monde a également pu contribuer dans la rédaction du fichier _README_ du dépôt et prendre connaissance des particularités de la syntaxe Markdown. Même si le projet ne s'y prêtait pas (trop d'erreurs imbriquées, trop peu de fichiers à débogguer, délai de rendu trop court), le groupe pourrait encore gagner en efficacité en s'organisant mieux en amont : 
-* en *définissant plus rigoureusement les périmètres d'intervention* de chacun de ses membres. Cela implique notamment une identification plus précise des bogues, dès la première réunion, et une répartition plus stricte entre développeurs des _issues_.
+Tout le monde a également pu contribuer dans la rédaction du fichier _README_ du dépôt et prendre connaissance des particularités de la syntaxe _Markdown_. Même si le projet ne s'y prêtait pas (trop d'erreurs imbriquées, trop peu de fichiers à débogguer, délai de rendu trop court), le groupe pourrait encore gagner en efficacité en s'organisant mieux en amont : 
+* en *définissant plus rigoureusement les périmètres d'intervention* de chacun de ses membres. Cela implique notamment une identification plus précise des bogues, dès la première réunion, et une répartition plus stricte entre développeurs des _issues_ plutôt que d'en rajouter au fil de l'eau ce qui peut créer des doublons ;
 * en *harmonisant les conceptions que chacun a de la notion de _déboggage_*. Jusqu'à quel point peut-on aller dans l'optimisation et la refactorisation d'un code qu'on juge de mauvaise facture ?
