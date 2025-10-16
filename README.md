@@ -34,7 +34,7 @@
 | Mathieu L.  | mathleys    | bugfix/mathieu | 
 | Filippos K. | filkat34    | bugfix/filippos |
 
-# Objectifs
+## Objectifs
 - [x] Mobiliser les méthodes de déboggage abordées en classe virtuelle pour rendre une page web fonctionnelle.
 - [x] Savoir utiliser le client git et la plateforme Github en vue de collaborer au sein d'une équipe de développement.
 - [x] Se familiariser avec la syntaxe _Markdown_ en vue de rédiger la documentation d'un dépôt distant. 
@@ -171,5 +171,5 @@ Tous les membres du groupe maîtrisent les différentes méthodes de déboggage,
 Tout le monde a également pu contribuer dans la rédaction du fichier _README_ du dépôt et prendre connaissance des particularités de la syntaxe _Markdown_. 
 
 Même si le projet ne s'y prêtait pas (trop d'erreurs imbriquées, trop peu de fichiers à débogguer, délai de rendu trop court), le groupe pourrait encore gagner en efficacité en s'organisant mieux en amont : 
-* en *définissant plus rigoureusement les périmètres d'intervention* de chacun de ses membres. Cela implique notamment une identification plus précise des bogues, dès la première réunion, et une répartition plus stricte entre développeurs des _issues_ plutôt que d'en rajouter au fil de l'eau ce qui peut créer des doublons.
+* en *définissant plus rigoureusement le périmètre d'intervention* de chacun de ses membres. Cela implique notamment une identification plus précise des bogues, dès la première réunion, et une répartition plus stricte entre développeurs des _issues_ plutôt que d'en rajouter au fil de l'eau ce qui peut créer des doublons.
 * en *harmonisant les conceptions que chacun a de la notion de _déboggage_*. Jusqu'à quel point peut-on aller dans l'optimisation et la refactorisation d'un code qu'on juge de mauvaise facture ?
