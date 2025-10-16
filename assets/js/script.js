@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // Lance l'initialisation quand la page est prête
   let isRunning = true;
   const button = document.querySelector(".controls .button");
   const hoursElement = document.querySelector("#hours");
@@ -6,6 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const secondsElement = document.querySelector("#seconds");
 
   if (!button || !hoursElement || !minutesElement || !secondsElement) {
+    // Signale une configuration invalide et stoppe tout
     console.error("Éléments du minuteur introuvables.");
     return;
   }
@@ -13,6 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
   init();
 
   function init() {
+    // Configure les interactions et la mise à jour périodique
     button.addEventListener("click", toggleRunState);
     button.classList.toggle("pause", isRunning);
     updateClock();
@@ -24,6 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function toggleRunState() {
+    // Bascule entre pause et lecture
     isRunning = !isRunning;
     button.classList.toggle("pause", isRunning);
     if (isRunning) {
@@ -32,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateClock() {
+    // Rafraîchit l'heure affichée et la couleur du fond
     const now = new Date();
     hoursElement.textContent = adjustTimer(now.getHours());
     minutesElement.textContent = adjustTimer(now.getMinutes());
@@ -44,10 +49,12 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function adjustTimer(value) {
+    // Force un affichage sur deux chiffres
     return value < 10 ? `0${value}` : `${value}`;
   }
 
   function rgbFromTime(hours, minutes, seconds) {
+    // Transforme l'heure en composantes RGB
     const ranges = [23, 59, 59];
     const [r, g, b] = [hours, minutes, seconds].map((value, index) =>
       Math.round((value / ranges[index]) * 255)
