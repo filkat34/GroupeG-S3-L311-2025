@@ -124,7 +124,7 @@ Quelques incohérences dans le typage des variables et dans la structuration des
 | Fichier| Exemple | Solution |
 | :----- | :------ | :------  |
 | script | ```let is_run = "true"``` | La variable doit être un boléen sinon elle sera toujours _false_. Il suffit d'enlever les guillemets : ```let is_run = true``` |
-| script |  ```function randomHexColor(x, y)``` | La signature de la fonction comporte trois paramètres alors que son corps et son appel utilisent trois arguments. Il faut rétablir le troisième au niveau de la signature :  ```function randomHexColor(x, y, z)``` |
+| script |  ```function randomHexColor(x, y)``` | La signature de la fonction comporte deux paramètres alors que son corps et son appel utilisent trois arguments. Il faut rétablir le troisième au niveau de la signature :  ```function randomHexColor(x, y, z)``` |
 |script | ```function adjustTimer(timer){(timer < 10 ? '0'+timer : timer);}``` | Le _return_ de la fonction a été oublié : ```function adjustTimer(timer){return (timer < 10 ? '0'+ timer : timer);}``` |
 | index | ```<div id="wrapper"><div class="inside" id="wrapper">``` | Deux éléments dans la structure ont le même _id_ qui est censé être unique. Il faut soit renommer l'un des deux ou refactoriser. |
 
