@@ -35,9 +35,9 @@
 | Filippos K. | filkat34    | bugfix/filippos |
 
 # Objectifs
-1. Mobiliser les méthodes de déboggage abordées en classe virtuelle pour rendre une page web fonctionnelle.
-2. Savoir utiliser le client git et la plateforme Github en vue de collaborer au sein d'une équipe de développement.
-3. Se familiariser avec la syntaxe _Markdown_ en vue de rédiger la documentation d'un dépôt distant. 
+- [x] Mobiliser les méthodes de déboggage abordées en classe virtuelle pour rendre une page web fonctionnelle.
+- [x] Savoir utiliser le client git et la plateforme Github en vue de collaborer au sein d'une équipe de développement.
+- [x] Se familiariser avec la syntaxe _Markdown_ en vue de rédiger la documentation d'un dépôt distant. 
 
 ## Travail collaboratif
 
