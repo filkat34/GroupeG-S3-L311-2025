@@ -161,7 +161,7 @@ Selon les choix des uns et des autres, de nombreuses modifications ont été app
 |L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
 |Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |🟨|
 
-🟨 _Implémentation partielle et non universelle. Fonctionne correctement sur certains navigateurs (Firefox) mais non sur d'autres. Son fonctionnement dépent également de la taille de la fenêtre du navigateur redimensionné (il faudrait rajouter d'autres breakpoints)._
+🟨 _Implémentation partielle et non universelle. Fonctionne correctement sur certains navigateurs (Firefox) mais non sur d'autres. Son fonctionnement dépend également de la taille de la fenêtre du navigateur redimensionnée (il faudrait sans doute rajouter d'autres breakpoints dans le css)._
 
 ## Bilan et perspectives
 Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablies conformément aux consignes de l'exercice. 
