@@ -163,6 +163,10 @@ Selon les choix des uns et des autres, de nombreuses modifications ont été app
 
 🟨 _Implémentation partielle et non universelle. Fonctionne correctement sur certains navigateurs (Firefox) mais non sur d'autres. Son fonctionnement dépend également de la taille de la fenêtre du navigateur redimensionnée (il faudrait sans doute rajouter d'autres breakpoints dans le css)._
 
+Après des tests sur plusieurs navigateurs, la branche _bugfix/filippos_ présentait le moins de problèmes d'affichage. Nous avons donc décidé de la fusionner dans la branche _main_. Nous n'avons supprimé aucune des branches de développement afin que le travail de chacun puisse être visible.
+
+Nous avons également suite à cela déployé notre horloge sur la [page github](https://filkat34.github.io/GroupeG-S3-L311-2025/) du dépôt distant.
+
 ## Bilan et perspectives
 Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablies conformément aux consignes de l'exercice. 
 
