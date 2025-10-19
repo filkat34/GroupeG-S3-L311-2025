@@ -1,0 +1,71 @@
+/* Border, padding inclus dans le calcul de la largeur, hauteur */
+* {
+box-sizing: border-box;
+}
+
+html, body{
+margin:0;
+padding: 0;
+font-family: "Aldrich";
+height:100vh;
+color: #F0F1D5;
+background-color: transparent;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+gap: 0.1em;
+font-weight: bold;
+font-size: 4.69em;
+}
+
+/* Ajout d'une ombre portée aux chiffres du timer pour améliorer la lisibilité */
+.timer {
+    display: flex;
+    gap: 0.1em;
+    text-shadow: 2px 2px 6px #222, 0 0 2px #fff;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    margin: 0 0.1em;
+}
+
+.controls {
+display: flex;
+margin-top: 0.2em;
+}
+
+.controls button {
+height: 4.6em;
+background-color: transparent;
+border-color: transparent transparent transparent #F0F1D5;
+transition: 100ms all ease;
+cursor: pointer;
+border-style: solid;
+border-width: 2.3em 0 2.3em 3.75em;
+}
+
+.controls button.pause {
+border-style: double;
+border-width: 0.06em 0 0.06em 3.75em;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 600px) {
+    .container {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+    .timer {
+        font-size: 2em;
+        gap: 0.05em;
+    }
+}
