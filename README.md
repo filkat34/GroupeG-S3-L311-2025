@@ -159,7 +159,9 @@ Selon les choix des uns et des autres, de nombreuses modifications ont été app
 |Le bouton affiche “pause” quand l'heure tourne et “play” quand elle ne tourne pas.|✅| |✅|✅|
 |L'horloge reste lisible et centrée, sans débordement.|✅| |✅|✅|
 |L'affichage de l'horloge s'adapte correctement sur de plus petits écrans (mobile, tablette).|✅| | |✅|
-|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |✅|
+|Lorsque le bouton bascule entre play/pause, il ne pousse pas les autres éléments du DOM. | | | |🟨|
+
+🟨 _Implémentation partielle et non universelle. Fonctionne correctement sur certains navigateurs (Firefox) mais non sur d'autres. Son fonctionnement dépent également de la taille de la fenêtre du navigateur redimensionné (il faudrait rajouter d'autres breakpoints)._
 
 ## Bilan et perspectives
 Les objectifs fixés ont tous été atteints. L'affichage de l'application et ses fonctionnalités ont été rétablies conformément aux consignes de l'exercice. 
